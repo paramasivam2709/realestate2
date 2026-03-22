@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Where Luxury Meets Affordability</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-shape"></div>
+                <span class="logo-letter">S</span>
+            </div>
+            <p class="loading-text">Loading Stackly...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+           <a href="index.html" class="logo">
+                   <img src="img/logo_gold.png" alt="Stackly Logo" class="logo-img">
+                   <span class="logo-text">Stackly</span>
+                   </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active" data-link="Home">Home</a>
+                <a href="about.html" class="nav-link" data-link="About">About</a>
+                <a href="product.html" class="nav-link" data-link="Product">Product</a>
+                <a href="services.html" class="nav-link" data-link="Services">Services</a>
+                <a href="contact.html" class="nav-link" data-link="Contact">Contact</a>
+            </div>
+
+            <a href="login.html" class="contact-btn">
+                <span>Login</span>
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="product.html" class="mobile-nav-link">Product</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <a href="login.html" class="mobile-contact-btn">Login</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg" id="heroBg">
+            <img src="img/bg.jpeg" alt="Luxury Estate">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Particle Background -->
+        <div class="particles" id="particles"></div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="tag-badge">
+                    <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span>Experience Real Estate Excellence</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="title-line">Where Luxury Meets</span>
+                    <span class="title-line gradient-text">Affordability</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Discover your dream property with Stackly. We connect you with exclusive
+                    listings and personalized service that exceeds expectations.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#properties" class="btn-primary">
+                        <span>Explore Properties</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#about" class="btn-outline">
+                        <svg class="users-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span>Meet Our Team</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Floating Cards -->
+            <div class="floating-cards">
+                <!-- Left Card -->
+                <div class="card left-card">
+                    <div class="card-tags">
+                        <span class="tag-outline">Popular</span>
+                        <span class="tag-gold">Exclusive</span>
+                    </div>
+                    <h3 class="card-title">Exclusive Country Estate</h3>
+                    <p class="card-subtitle">Expansive Grounds</p>
+                    <div class="card-avatars">
+                        <div class="avatar-stack">
+                            <img src="https://i.pravatar.cc/100?img=11" alt="User 1" class="avatar">
+                            <img src="https://i.pravatar.cc/100?img=12" alt="User 2" class="avatar">
+                            <img src="https://i.pravatar.cc/100?img=13" alt="User 3" class="avatar">
+                            <div class="avatar-more">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 5v14M5 12h14"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="supervisor-count"><span class="gold-text">100+</span> Supervisors</span>
+                    </div>
+                    <div class="property-preview">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=250&fit=crop" alt="Luxurious Penthouse">
+                        <div class="preview-overlay">
+                            <div class="preview-info">
+                                <p class="preview-title">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                        <polyline points="9 22 9 12 15 12 15 22"/>
+                                    </svg>
+                                    Luxurious Penthouse
+                                </p>
+                                <p class="preview-location">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Stunning City Views
+                                </p>
+                            </div>
+                            <span class="price-tag">$2.5M</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Card -->
+                <div class="card right-card">
+                    <div class="notification-header">
+                        <img src="https://i.pravatar.cc/100?img=33" alt="Customer" class="notification-avatar">
+                        <div class="notification-title">
+                            <p>Customer gets</p>
+                            <p class="gold-text">notification</p>
+                        </div>
+                    </div>
+                    <div class="notification-list">
+                        <div class="notification-item">
+                            <div class="check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <div class="notification-text">
+                                <p class="notification-main">Promotions and Discounts</p>
+                                <p class="notification-sub">Save up to 20%</p>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <div class="notification-text">
+                                <p class="notification-main">New Listings</p>
+                                <p class="notification-sub">Daily updates</p>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <div class="notification-text">
+                                <p class="notification-main">Appointment Reminders</p>
+                                <p class="notification-sub">Never miss a visit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="get-started-btn">
+                        <span>Get Started</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="services" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Services</span>
+                <h2 class="section-title">Why Choose <span class="gradient-text">Stackly</span></h2>
+                <p class="section-subtitle">
+                    We provide comprehensive real estate services designed to make your property
+                    journey smooth, secure, and successful.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon icon-emerald">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Secure Transactions</h3>
+                    <p>Every deal is protected with bank-level security and verified documentation.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated team is available around the clock to assist you.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-gold">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"/>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                        </svg>
+                    </div>
+                    <h3>Premium Listings</h3>
+                    <p>Access exclusive properties not available on other platforms.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Personal Agent</h3>
+                    <p>Get a dedicated real estate expert to guide your journey.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-orange">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                            <polyline points="17 6 23 6 23 12"/>
+                        </svg>
+                    </div>
+                    <h3>Market Insights</h3>
+                    <p>Data-driven analysis to help you make informed decisions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-cyan">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Prime Locations</h3>
+                    <p>Properties in the most sought-after neighborhoods and districts.</p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <div class="stat-value">10K+</div>
+                    <div class="stat-label">Properties Sold</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="stat-value">5K+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"/>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                        </svg>
+                    </div>
+                    <div class="stat-value">15+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-value">50+</div>
+                    <div class="stat-label">Expert Agents</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="product" class="properties">
+        <div class="container">
+            <div class="section-header row-header">
+                <div>
+                    <span class="section-tag">Featured Properties</span>
+                    <h2 class="section-title white">Exclusive <span class="gradient-text">Listings</span></h2>
+                    <p class="section-subtitle white-60">
+                        Discover our handpicked selection of premium properties available for sale.
+                    </p>
+                </div>
+                <a href="#all-properties" class="view-all-link">
+                    <span>View All Properties</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&h=400&fit=crop" alt="Modern Villa">
+                        <div class="image-overlay"></div>
+                        <span class="property-tag">Featured</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </button>
+                        <div class="property-rating">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <span>4.9</span>
+                        </div>
+                        <span class="property-price">$3,500,000</span>
+                    </div>
+                    <div class="property-content">
+                        <h3>Modern Villa with Pool</h3>
+                        <p class="property-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Beverly Hills, California
+                        </p>
+                        <div class="property-features">
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 20h20M5 20v-5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5"/>
+                                </svg>
+                                5
+                            </span>
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 12h16M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                                </svg>
+                                4
+                            </span>
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                </svg>
+                                4,500 sqft
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop" alt="Luxury Penthouse">
+                        <div class="image-overlay"></div>
+                        <span class="property-tag tag-new">New</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </button>
+                        <div class="property-rating">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <span>4.8</span>
+                        </div>
+                        <span class="property-price">$5,200,000</span>
+                    </div>
+                    <div class="property-content">
+                        <h3>Luxury Penthouse Suite</h3>
+                        <p class="property-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Manhattan, New York
+                        </p>
+                        <div class="property-features">
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 20h20M5 20v-5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5"/>
+                                </svg>
+                                3
+                            </span>
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 12h16M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                                </svg>
+                                3
+                            </span>
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                </svg>
+                                3,200 sqft
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" alt="Seaside Estate">
+                        <div class="image-overlay"></div>
+                        <span class="property-tag tag-exclusive">Exclusive</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </button>
+                        <div class="property-rating">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <span>5.0</span>
+                        </div>
+                        <span class="property-price">$7,800,000</span>
+                    </div>
+                    <div class="property-content">
+                        <h3>Seaside Mediterranean Estate</h3>
+                        <p class="property-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Miami Beach, Florida
+                        </p>
+                        <div class="property-features">
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 20h20M5 20v-5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5"/>
+                                </svg>
+                                6
+                            </span>
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 12h16M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                                </svg>
+                                5
+                            </span>
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                </svg>
+                                6,800 sqft
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop" alt="Mountain Retreat">
+                        <div class="image-overlay"></div>
+                        <span class="property-tag tag-popular">Popular</span>
+                        <button class="favorite-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </button>
+                        <div class="property-rating">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <span>4.7</span>
+                        </div>
+                        <span class="property-price">$4,900,000</span>
+                    </div>
+                    <div class="property-content">
+                        <h3>Contemporary Mountain Retreat</h3>
+                        <p class="property-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Aspen, Colorado
+                        </p>
+                        <div class="property-features">
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 20h20M5 20v-5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5"/>
+                                </svg>
+                                4
+                            </span>
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 12h16M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                                </svg>
+                                4
+                            </span>
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                </svg>
+                                5,200 sqft
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop" alt="Our Office">
+                        <div class="play-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="floating-card years-card">
+                        <div class="years-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"/>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                            </svg>
+                        </div>
+                        <div class="years-content">
+                            <span class="years-number">15+</span>
+                            <span class="years-text">Years of Excellence</span>
+                        </div>
+                    </div>
+                    <div class="secondary-image">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=300&h=300&fit=crop" alt="Team Meeting">
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <span class="section-tag">About Stackly</span>
+                    <h2 class="section-title">Your Trusted Partner in <span class="gradient-text">Real Estate</span></h2>
+                    <p class="about-text">
+                        Since 2009, Stackly has been at the forefront of the real estate industry,
+                        connecting discerning buyers with exceptional properties. Our team of expert
+                        agents brings unparalleled market knowledge and a commitment to excellence
+                        that sets us apart.
+                    </p>
+                    <p class="about-text">
+                        We understand that buying or selling a property is more than just a
+                        transaction—it's a life-changing experience. That's why we take the time to
+                        understand your unique needs and goals, providing personalized service every
+                        step of the way.
+                    </p>
+
+                    <div class="achievements">
+                        <div class="achievement-item">
+                            <div class="check-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <span>Over $2 billion in property sales</span>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="check-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <span>98% client satisfaction rate</span>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="check-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <span>Award-winning customer service</span>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="check-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <span>Exclusive market partnerships</span>
+                        </div>
+                    </div>
+
+                    <div class="about-buttons">
+                        <a href="#contact" class="btn-primary">
+                            <span>Work With Us</span>
+                            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#team" class="btn-outline-dark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                            <span>Meet Our Team</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values -->
+            <div class="values-section">
+                <h3 class="values-title">Our Core <span class="gradient-text">Values</span></h3>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
+                        <h4>Integrity</h4>
+                        <p>We believe in honest, transparent dealings with all our clients.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h4>Client First</h4>
+                        <p>Your needs and satisfaction are at the heart of everything we do.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"/>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                            </svg>
+                        </div>
+                        <h4>Excellence</h4>
+                        <p>We strive for excellence in every transaction and interaction.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h4>Results Driven</h4>
+                        <p>We focus on delivering measurable results that exceed expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="review" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title white">What Our <span class="gradient-text">Clients Say</span></h2>
+                <p class="section-subtitle white-60">
+                    Don't just take our word for it. Here's what our satisfied clients have to say
+                    about their experience with Stackly.
+                </p>
+            </div>
+
+            <div class="testimonial-carousel">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+                        </svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-text">"Stackly made our dream of owning a home a reality. Their team was incredibly supportive throughout the entire process, from finding the perfect property to closing the deal. I cannot recommend them enough!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/150?img=5" alt="Sarah Mitchell" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Sarah Mitchell</h4>
+                                <p>Home Buyer</p>
+                            </div>
+                            <span class="property-badge">Modern Villa in Beverly Hills</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-nav">
+                    <button class="nav-btn prev-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"/>
+                        </svg>
+                    </button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="nav-btn next-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Client Logos -->
+            <div class="client-logos">
+                <p class="logos-title">Trusted by leading companies worldwide</p>
+                <div class="logos-row">
+                    <span class="logo-item">Forbes</span>
+                    <span class="logo-item">Bloomberg</span>
+                    <span class="logo-item">Reuters</span>
+                    <span class="logo-item">CNBC</span>
+                    <span class="logo-item">Wall Street Journal</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta">
+        <div class="cta-bg">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=800&fit=crop" alt="City Skyline">
+            <div class="cta-overlay"></div>
+        </div>
+
+        <div class="container">
+            <div class="cta-grid">
+                <div class="cta-content">
+                    <span class="section-tag tag-gold">Get Started Today</span>
+                    <h2 class="section-title white">Ready to Find Your <span class="gradient-text">Dream Home?</span></h2>
+                    <p class="cta-text">
+                        Subscribe to our newsletter and be the first to know about exclusive listings,
+                        market insights, and special offers. Your dream property is just a click away.
+                    </p>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email us</span>
+                                <span class="contact-value">hello@stackly.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Call us</span>
+                                <span class="contact-value">+1 (555) 123-4567</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Visit us</span>
+                                <span class="contact-value">123 Luxury Lane, Beverly Hills, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <div class="contact-form">
+                        <h3>Schedule a Consultation</h3>
+                        <p>Fill in your details and we'll get back to you within 24 hours.</p>
+                        <form action="404.html" id="contactForm">
+                            <div class="form-row">
+                                <input type="text" placeholder="First Name" class="form-input" required>
+                                <input type="text" placeholder="Last Name" class="form-input" required>
+                            </div>
+                            <input type="email" placeholder="Email Address" class="form-input" required>
+                            <input type="tel" placeholder="Phone Number" class="form-input" required>
+                            <select class="form-input form-select">
+                                <option value="">I'm interested in...</option>
+                                <option value="buy">Buying a Property</option>
+                                <option value="sell">Selling a Property</option>
+                                <option value="rent">Renting a Property</option>
+                                <option value="invest">Property Investment</option>
+                            </select>
+                            <textarea placeholder="Tell us more about what you're looking for..." class="form-input form-textarea" rows="4"></textarea>
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                   <img src="img/logo_gold.png" alt="Stackly Logo" class="logo-img">
+                   <span class="logo-text">Stackly</span>
+                   </a>
+                    <p class="footer-desc">
+                        Your trusted partner in real estate. We help you find the perfect property
+                        that matches your lifestyle and investment goals.
+                    </p>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>123 Luxury Lane, Beverly Hills, CA 90210</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>hello@stackly.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="404.html">About Us</a></li>
+                        <li><a href="404.html">Our Team</a></li>
+                        <li><a href="404.html">Careers</a></li>
+                        <li><a href="404.html">Press</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="404.html">Buy Property</a></li>
+                        <li><a href="404.html">Sell Property</a></li>
+                        <li><a href="404.html">Rent Property</a></li>
+                        <li><a href="404.html">Property Management</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="404.html">Blog</a></li>
+                        <li><a href="404.html">Market Reports</a></li>
+                        <li><a href="404.html">FAQs</a></li>
+                        <li><a href="404.html">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms of Service</a></li>
+                        <li><a href="404.html">Cookie Policy</a></li>
+                        <li><a href="404.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Stackly Real Estate. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="404.html" class="social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="404.html" class="social-link" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                    <a href="404.html" class="social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="404.html" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="404.html" class="social-link" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

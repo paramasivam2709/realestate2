@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Stackly Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4e5c2;
+            --gold-dark: #b8960c;
+            --dark: #1a1a2e;
+            --dark-light: #252540;
+            --cream: #faf8f5;
+            --white: #ffffff;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-400: #9ca3af;
+            --gray-600: #4b5563;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--dark);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            position: relative;
+        }
+        
+        /* Background Animation */
+        .bg-animation {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+        
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
+        }
+        
+        /* Floating Particles */
+        .particles {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(212, 175, 55, 0.4);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .particle:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { top: 20%; left: 80%; animation-delay: 1s; }
+        .particle:nth-child(3) { top: 60%; left: 15%; animation-delay: 2s; }
+        .particle:nth-child(4) { top: 80%; left: 70%; animation-delay: 3s; }
+        .particle:nth-child(5) { top: 40%; left: 90%; animation-delay: 4s; }
+        .particle:nth-child(6) { top: 70%; left: 30%; animation-delay: 5s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+            50% { transform: translateY(-30px) scale(1.2); opacity: 0.8; }
+        }
+        
+        /* Error Container */
+        .error-container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px;
+            max-width: 600px;
+        }
+        
+        /* Logo */
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 48px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            position: relative;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-shape {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 10px;
+            transform: rotate(45deg);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: rotate(45deg) scale(1); }
+            50% { transform: rotate(45deg) scale(1.05); }
+        }
+        
+        .logo-icon span {
+            position: relative;
+            z-index: 1;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--white);
+        }
+        
+        /* Error Code */
+        .error-code {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(120px, 20vw, 200px);
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            animation: shimmer 3s linear infinite;
+            background-size: 200% auto;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+        
+        /* Error Illustration */
+        .error-illustration {
+            width: 200px;
+            height: 200px;
+            margin: -40px auto 24px;
+            position: relative;
+        }
+        
+        .house-icon {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .house-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .house-main {
+            animation: houseFloat 4s ease-in-out infinite;
+        }
+        
+        @keyframes houseFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .house-roof {
+            animation: roofWiggle 3s ease-in-out infinite;
+            transform-origin: center bottom;
+        }
+        
+        @keyframes roofWiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-2deg); }
+            75% { transform: rotate(2deg); }
+        }
+        
+        /* Error Title */
+        .error-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+        
+        /* Error Message */
+        .error-message {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 32px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Action Buttons */
+        .error-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+        
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 9999px;
+            color: var(--white);
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-primary svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-primary:hover svg {
+            transform: translateX(-4px);
+        }
+        
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 9999px;
+            color: var(--white);
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Search Box */
+        .search-box {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .search-input-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 14px 20px 14px 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 9999px;
+            font-size: 14px;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+        
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .search-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--gold);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .search-btn {
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 8px 20px;
+            background: var(--gold);
+            border: none;
+            border-radius: 9999px;
+            color: var(--dark);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .search-btn:hover {
+            background: var(--gold-light);
+        }
+        
+        /* Quick Links */
+        .quick-links {
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .quick-links-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        
+        .quick-links-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .quick-link {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 9999px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .quick-link:hover {
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--gold);
+        }
+        
+        /* Responsive */
+        @media (max-width: 640px) {
+            .error-container {
+                padding: 24px;
+            }
+            
+            .error-illustration {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary,
+            .btn-outline {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .search-input-wrapper {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+    
+    <!-- Error Container -->
+    <div class="error-container">
+        
+        
+        <!-- Error Code -->
+        <div class="error-code">404</div>
+        
+        <!-- Error Illustration -->
+        <div class="error-illustration">
+            <svg class="house-icon" viewBox="0 0 200 200" fill="none">
+                <!-- House Base -->
+                <g class="house-main">
+                    <!-- Main Structure -->
+                    <rect x="40" y="80" width="120" height="100" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                    
+                    <!-- Door -->
+                    <rect x="85" y="120" width="30" height="60" rx="2" fill="rgba(212,175,55,0.2)" stroke="var(--gold)" stroke-width="2"/>
+                    <circle cx="108" cy="150" r="2" fill="var(--gold)"/>
+                    
+                    <!-- Windows -->
+                    <rect x="55" y="100" width="25" height="25" rx="2" fill="rgba(212,175,55,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                    <line x1="67.5" y1="100" x2="67.5" y2="125" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                    <line x1="55" y1="112.5" x2="80" y2="112.5" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                    
+                    <rect x="120" y="100" width="25" height="25" rx="2" fill="rgba(212,175,55,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                    <line x1="132.5" y1="100" x2="132.5" y2="125" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                    <line x1="120" y1="112.5" x2="145" y2="112.5" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                    
+                    <!-- Window Light Effect -->
+                    <rect x="57" y="102" width="21" height="21" rx="1" fill="url(#windowGlow)" opacity="0.5"/>
+                    <rect x="122" y="102" width="21" height="21" rx="1" fill="url(#windowGlow)" opacity="0.5"/>
+                </g>
+                
+                <!-- Roof -->
+                <g class="house-roof">
+                    <path d="M20 85L100 20L180 85" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <path d="M30 80L100 28L170 80" fill="rgba(212,175,55,0.1)"/>
+                    
+                    <!-- Chimney -->
+                    <rect x="140" y="45" width="15" height="30" rx="2" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                    
+                    <!-- Smoke -->
+                    <circle cx="147.5" cy="38" r="4" fill="rgba(255,255,255,0.3)" opacity="0.6">
+                        <animate attributeName="cy" values="38;25;15" dur="2s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.6;0.3;0" dur="2s" repeatCount="indefinite"/>
+                        <animate attributeName="r" values="4;6;8" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="147.5" cy="38" r="3" fill="rgba(255,255,255,0.3)" opacity="0.4">
+                        <animate attributeName="cy" values="38;25;15" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.4;0.2;0" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+                        <animate attributeName="r" values="3;5;7" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+                    </circle>
+                </g>
+                
+                <!-- Question Mark -->
+                <text x="100" y="155" text-anchor="middle" font-family="Playfair Display" font-size="48" font-weight="700" fill="var(--gold)">?</text>
+                
+                <!-- Gradient Definitions -->
+                <defs>
+                    <radialGradient id="windowGlow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="var(--gold)" stop-opacity="0.5"/>
+                        <stop offset="100%" stop-color="var(--gold)" stop-opacity="0"/>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+        
+        <!-- Error Title -->
+        <h1 class="error-title">Page Not Found</h1>
+        
+        <!-- Error Message -->
+        <p class="error-message">
+            Oops! The page you're looking for seems to have vanished into thin air. 
+            It might have been moved, deleted, or never existed in the first place.
+        </p>
+        
+        <!-- Action Buttons -->
+        <div class="error-actions">
+            <a href="index.html" class="btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+                Back to Home
+            </a>
+            <button class="btn-outline" onclick="history.back()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Go Back
+            </button>
+        </div>
+        
+        <!-- Search Box -->
+        <div class="search-box">
+            <div class="search-input-wrapper">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="M21 21l-4.35-4.35"/>
+                </svg>
+                <input type="text" class="search-input" placeholder="Search for properties, pages, or help...">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <p class="quick-links-title">Popular Pages</p>
+            <div class="quick-links-list">
+                <a href="product.html" class="quick-link">Properties</a>
+                <a href="about.html" class="quick-link">About Us</a>
+                <a href="service.html" class="quick-link">Services</a>
+                <a href="contact.html" class="quick-link">Contact</a>
+                <a href="login.html" class="quick-link">Login</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
