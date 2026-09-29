@@ -4,6 +4,11 @@
    ======================================== */
 
 /* CSS Variables */
+html,
+body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+}
 :root {
     --gold: #d4af37;
     --gold-light: #f4e5c2;
@@ -2512,6 +2517,18 @@ ul {
     
     .btn-primary,
     .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Keep the call-to-action buttons aligned on narrow home-page layouts. */
+    .about-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about-buttons .btn-primary,
+    .about-buttons .btn-outline-dark {
         width: 100%;
         justify-content: center;
     }

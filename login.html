@@ -402,7 +402,7 @@
             </a>
             
             <a href="index.html" class="logo">
-                   <img src="img/logo_gold.png" alt="Stackly Logo" class="logo-img">
+                   <img src="img/logo_gold.webp" alt="Stackly Logo" class="logo-img">
                    <span class="logo-text">Stackly</span>
                    </a>
             
@@ -503,19 +503,30 @@
                 alert('Please select a role');
                 return;
             }
+
+            const loginEmail = email.trim();
+            try {
+                sessionStorage.setItem('stacklyLoginEmail', loginEmail);
+            } catch (error) {
+                // The redirect fragment below also supports local-file browsing.
+            }
             
             // Simple validation (in real app, this would connect to backend)
             if (role === 'seller') {
                 if (email  && password ) {
                     alert('Welcome Seller!');
-                    window.location.href = 'admindashbord.html';
+                    const dashboardUrl = new URL('admindashbord.html', window.location.href);
+                    dashboardUrl.hash = new URLSearchParams({ loginEmail }).toString();
+                    window.location.href = dashboardUrl.toString();
                 } else {
                     alert('Invalid seller credentials');
                 }
             } else if (role === 'buyer') {
                 if (email && password) {
                     alert('Login successful!');
-                    window.location.href = 'user.html';
+                    const dashboardUrl = new URL('user.html', window.location.href);
+                    dashboardUrl.hash = new URLSearchParams({ loginEmail }).toString();
+                    window.location.href = dashboardUrl.toString();
                 } else {
                     alert('Please fill in all fields');
                 }
